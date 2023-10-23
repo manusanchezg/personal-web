@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ButtonDarkMode from "./ButtonDarkMode";
+import Card from "../Card/Card";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
         >
           You are in my website now, nice to meet you 🤗🤗🤗
         </motion.h3>
+        <Card items={[{id: "1", subtitle: "Tu vieja en tanga", title:"A eia"}]} />
       </div>
     </>
   );
