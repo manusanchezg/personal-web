@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
 import ButtonDarkMode from "./ButtonDarkMode";
+import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
 import Card from "../Card/Card";
 
 function Home() {
+  const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
   return (
     <>
       <ButtonDarkMode />
-      <div className="pl-72 min-h-screen w-screen dark:text-white dark:bg-gray-900">
+      <div
+        className={`ml-5 h-full w-screen dark:text-white dark:bg-gray-900 sm:fixed left-72 ${isSidebarOpen ? "blur-sm" : ""}`}
+      >
         <motion.h1
           animate={{ x: [-200, 0] }}
           transition={{ ease: "easeOut", duration: 1 }}
-          className="font-semibold pt-4"
+          className="font-semibold"
         >
           Hi There!
         </motion.h1>
@@ -22,7 +26,9 @@ function Home() {
         >
           You are in my website now, nice to meet you 🤗🤗🤗
         </motion.h3>
-        <Card items={[{id: "1", subtitle: "Tu vieja en tanga", title:"A eia"}]} />
+        <Card
+          items={[{ id: "1", subtitle: "Tu vieja en tanga", title: "A eia" }]}
+        />
       </div>
     </>
   );

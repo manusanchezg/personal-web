@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SideBar from "./components/SideBar/SideBar";
 import { IsSideBarOpen } from "./utils/contexts";
 import { motion } from "framer-motion";
@@ -13,6 +13,7 @@ function App() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
+        className="h-screen w-screen dark:bg-gray-900"
       >
         <SideBar />
         <Home />

@@ -27,7 +27,7 @@ function SideBar() {
         sidebarRef.current &&
         !sidebarRef.current.contains(e.target as Node)
       ) {
-        closeSidebar();
+        if(window.innerWidth < 650) closeSidebar();
       }
     }
   };
@@ -38,9 +38,9 @@ function SideBar() {
       <aside
         id="logo-sidebar"
         ref={sidebarRef}
-        className={`fixed top-0 left-0 z-40 w-68 h-screen transition-transform ${
+        className={`fixed top-0 left-0 z-40 w-68 h-screen transition-transform sm:translate-x-0 ${
           isSidebarOpen ? "" : "-translate-x-full"
-        } sm:translate-x-0`}
+        }`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
