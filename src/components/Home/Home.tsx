@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ButtonDarkMode from "./ButtonDarkMode";
 import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
-import Card from "../Card/Card";
+import Cards from "../Cards/Cards";
 
 function Home() {
   const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
@@ -9,7 +9,9 @@ function Home() {
     <>
       <ButtonDarkMode />
       <div
-        className={`ml-5 h-full w-screen dark:text-white dark:bg-gray-900 sm:fixed left-72 ${isSidebarOpen ? "blur-sm" : ""}`}
+        className={`ml-5 h-full dark:text-white dark:bg-gray-900 sm:fixed left-72 ${
+          isSidebarOpen ? "blur-sm" : ""
+        }`}
       >
         <motion.h1
           animate={{ x: [-200, 0] }}
@@ -26,9 +28,7 @@ function Home() {
         >
           You are in my website now, nice to meet you 🤗🤗🤗
         </motion.h3>
-        <Card
-          items={[{ id: "1", subtitle: "Tu vieja en tanga", title: "A eia" }]}
-        />
+        <Cards />
       </div>
     </>
   );

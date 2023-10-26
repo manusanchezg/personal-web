@@ -27,7 +27,7 @@ function SideBar() {
         sidebarRef.current &&
         !sidebarRef.current.contains(e.target as Node)
       ) {
-        if(window.innerWidth < 650) closeSidebar();
+        if (window.innerWidth < 650) closeSidebar();
       }
     }
   };
