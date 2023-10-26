@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 import Icons from "../Icons/Icons";
+import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
 
 interface Item {
   id: string;
@@ -18,6 +18,10 @@ function Card({
   selectedId: string | null;
   setSelectedId: (id: string | null) => void;
 }) {
+  const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
+  const handleOnclick = () => {
+    if (window.innerWidth > 650 || !isSidebarOpen) setSelectedId(item.id);
+  };
   return (
     <>
       <div
@@ -29,7 +33,7 @@ function Card({
         <motion.div
           transition={{ type: "spring", duration: 0.3 }}
           layoutId={item.id}
-          onClick={() => setSelectedId(item.id)}
+          onClick={handleOnclick}
           className="p-4 h-40"
         >
           <motion.h2 className="text-2xl font-bold mt-2 dark:text-slate-300">
@@ -42,9 +46,9 @@ function Card({
       </div>
       <AnimatePresence>
         {selectedId === item.id && (
-          <motion.div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 overflow-auto">
+          <motion.div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
             <motion.div
-              className="relative bg-white rounded-lg shadow-md p-4 dark:bg-gray-800 max-h-[80vh] w-1/2"
+              className="relative bg-white rounded-lg shadow-md p-4 dark:bg-gray-800 max-h-[80vh] w-1/2 overflow-scroll"
               transition={{ type: "spring", duration: 0.3 }}
               layoutId={selectedId}
             >
