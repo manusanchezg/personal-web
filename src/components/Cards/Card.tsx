@@ -25,7 +25,7 @@ function Card({
   return (
     <>
       <div
-        className={`cursor-pointer relative rounded-lg overflow-hidden w-2/5 max-md:w-3/5 ${
+        className={`cursor-pointer relative rounded-lg overflow-hidden w-2/5 max-md:w-3/5 scroll-smooth ${
           selectedId ? "hidden" : "border"
         }`}
         style={{ zIndex: selectedId === item.id ? 1 : 0 }}
@@ -48,7 +48,7 @@ function Card({
         {selectedId === item.id && (
           <motion.div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
             <motion.div
-              className="relative bg-white rounded-lg shadow-md p-4 dark:bg-gray-800 max-h-[80vh] w-1/2 overflow-scroll"
+              className="relative bg-white rounded-lg shadow-md p-4 dark:bg-gray-800 max-h-[80vh] w-1/2 overflow-y-scroll"
               transition={{ type: "spring", duration: 0.3 }}
               layoutId={selectedId}
             >
@@ -60,10 +60,10 @@ function Card({
               </motion.h5>
               <motion.p>{item.body}</motion.p>
               <motion.button
-                className="absolute top-2 right-2 text-gray-500"
+                className="absolute top-2 right-2 text-gray-500 dark:bg-gray-800"
                 onClick={() => setSelectedId(null)}
               >
-                <Icons icon="cross" size={5} />
+                <Icons icon="cross" size={10} />
               </motion.button>
             </motion.div>
           </motion.div>
