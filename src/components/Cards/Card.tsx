@@ -25,7 +25,7 @@ function Card({
   return (
     <>
       <div
-        className={`cursor-pointer relative rounded-lg overflow-hidden w-2/5 ${
+        className={`cursor-pointer relative rounded-lg overflow-hidden w-2/5 max-md:w-3/5 ${
           selectedId ? "hidden" : "border"
         }`}
         style={{ zIndex: selectedId === item.id ? 1 : 0 }}
@@ -34,7 +34,7 @@ function Card({
           transition={{ type: "spring", duration: 0.3 }}
           layoutId={item.id}
           onClick={handleOnclick}
-          className="p-4 h-40"
+          className="p-4 h-44"
         >
           <motion.h2 className="text-2xl font-bold mt-2 dark:text-slate-300">
             {item.title}

@@ -9,7 +9,7 @@ function Home() {
     <>
       <ButtonDarkMode />
       <div
-        className={`ml-5 h-full dark:text-white dark:bg-gray-900 sm:fixed left-72 ${
+        className={`ml-5 h-full dark:text-white dark:bg-gray-900 md:fixed left-72 ${
           isSidebarOpen ? "blur-sm" : ""
         }`}
       >
@@ -24,7 +24,7 @@ function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="mt-4 ml-5 dark:text-slate-300"
-          transition={{ delay: 0.6, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
         >
           You are in my website now, nice to meet you 🤗🤗🤗
         </motion.h3>
