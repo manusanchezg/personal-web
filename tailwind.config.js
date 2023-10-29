@@ -10,6 +10,7 @@ export default {
       backgroundColor: {
         black: "rgba(0, 0, 0, 0.5);",
       },
+      
     },
   },
   plugins: [],

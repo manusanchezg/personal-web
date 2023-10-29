@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Icons from "../Icons/Icons";
 import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
+import { Link } from "react-router-dom";
 
 interface Item {
   id: string;
@@ -65,6 +66,12 @@ function Card({
               >
                 <Icons icon="cross" size={10} />
               </motion.button>
+              <Link
+                className="text-gray-500 dark:bg-gray-800"
+                to={"/about"}
+              >
+                See more
+              </Link>
             </motion.div>
           </motion.div>
         )}

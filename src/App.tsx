@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SideBar from "./components/SideBar/SideBar";
 import { IsSideBarOpen } from "./utils/contexts";
 import { motion } from "framer-motion";
 import Home from "./components/Home/Home";
+
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
