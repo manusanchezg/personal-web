@@ -2,6 +2,7 @@ import "./styles.css";
 import { motion, useScroll, useSpring } from "framer-motion";
 import ButtonDarkMode from "../Home/ButtonDarkMode";
 import Project from "./Project";
+import { data } from "./data";
 
 export default function Portfolio() {
   const { scrollYProgress } = useScroll();
@@ -14,8 +15,13 @@ export default function Portfolio() {
   return (
     <>
       <ButtonDarkMode />
-      {[1, 2, 3, 4, 5].map((image) => (
-        <Project id={image} />
+      {data.map((project) => (
+        <Project
+          id={project.id}
+          images={project.images}
+          link={project.link}
+          information={project.information}
+        />
       ))}
       <motion.div
         className="fixed left-0 right-0 bottom-5 h-2 bg-slate-500"
