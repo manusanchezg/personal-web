@@ -22,7 +22,7 @@ export default function Project({ id, images, information, link }: Props) {
     <section className="dark:bg-slate-900 w-screen relative flex justify-center items-center h-screen snap-center">
       <div
         ref={ref}
-        className="w-[40rem] h-[33rem] relative max-h-[90vh] m-6 overflow-hidden"
+        className="w-[47rem] h-[33rem] relative max-h-[90vh] m-6 overflow-hidden"
       >
         <Scroll images={images} information={information} link={link} />
       </div>

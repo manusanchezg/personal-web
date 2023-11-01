@@ -4,6 +4,7 @@ import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
 import ButtonSideBar from "./ButtonSideBar";
 import Title from "./Title";
 import Icons from "../Icons/Icons";
+import { Link } from "react-router-dom";
 
 function SideBar() {
   const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
@@ -47,22 +48,22 @@ function SideBar() {
           <Title />
           <ul className="space-y-2 font-medium">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <Icons icon="about" size={6} />
                 <span className="ml-3">About</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/portfolio"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <Icons icon="portfolio" />
                 <span className="flex-1 ml-3 whitespace-nowrap">Portfolio</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a

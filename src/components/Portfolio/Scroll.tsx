@@ -3,11 +3,11 @@ import { useRef } from "react";
 export default function Scroll({
   images,
   information,
-  link
+  link,
 }: {
   images: string[];
   information: string;
-  link: string
+  link: string;
 }) {
   const ref = useRef(null);
 
@@ -20,9 +20,13 @@ export default function Scroll({
         {images.map((url, index) => (
           <li
             key={index}
-            className={`w-60 bg-white ${index === 10 ? "mr-0" : "mr-20"} cursor-pointer`}
+            className={`w-60 bg-white ${
+              index === 10 ? "mr-0" : "mr-20"
+            } cursor-pointer`}
           >
-            <img src={url} alt={information} />
+            <a href={link} target="_blank">
+              <img src={url} alt={information} className="w-full h-full" />
+            </a>
           </li>
         ))}
       </ul>

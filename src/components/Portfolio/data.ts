@@ -2,9 +2,9 @@ export const data = [
   {
     id: 1,
     images: [
-      "../../assets/chess-game/chess-game-1.png",
-      "../../assets/chess-game/chess-game-2.png",
-      "../../assets/chess-game/chess-game-3.png",
+      "https://i.postimg.cc/0NHYkxjF/chess-game-2.png",
+      "ttps://i.postimg.cc/MK8yK9Z6/chess-game-3.png",
+      "https://i.postimg.cc/RFLv1Ctb/chess-game-1.png",
     ],
     link: "github.com/manusanchezg/chess-game-client",
     information:
@@ -13,9 +13,9 @@ export const data = [
   {
     id: 2,
     images: [
-      "../../assets/reversi-game/reversi-game-1.png",
-      "../../assets/reversi-game/reversi-game-2.png",
-      "../../assets/reversi-game/reversi-game-3.png",
+      "https://i.postimg.cc/JzQwdY0G/reversi-game-1.png",
+      "https://i.postimg.cc/mr2xx31V/reversi-game-2.png",
+      "https://i.postimg.cc/fbHGM3xs/reversi-game-3.png",
     ],
     link: "github.com/manusanchezg/Reversi-Game",
     information:
@@ -24,8 +24,8 @@ export const data = [
   {
     id: 3,
     images: [
-      "../../assets/snake-game/snake-game-1.png",
-      "../../assets/snake-game/snake-game-2.png",
+      "https://i.postimg.cc/02800VTt/snake-game-1.png",
+      "https://i.postimg.cc/mgn3RBtq/snake-game-2.png",
     ],
     link: "https://snake-game-canvas.vercel.app/",
     information:
@@ -34,9 +34,9 @@ export const data = [
   {
     id: 4,
     images: [
-      "../../assets/weather-app/weather-app-1.png",
-      "../../assets/weather-app/weather-app-2.png",
-      "../../assets/weather-app/weather-app-3.png",
+      "https://i.postimg.cc/T1S217gR/weather-app-1.png",
+      "https://i.postimg.cc/wjYHrskb/weather-app-2.png",
+      "https://i.postimg.cc/hPdcM0Vd/weather-app-3.png",
     ],
     link: "https://my-weather-app-eight-gamma.vercel.app/",
     information:
