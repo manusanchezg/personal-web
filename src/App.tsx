@@ -1,15 +1,11 @@
-import { useState } from "react";
 import SideBar from "./components/SideBar/SideBar";
-import { IsSideBarOpen } from "./utils/contexts";
 import { motion } from "framer-motion";
-import Home from "./components/Home/Home";
+import { Outlet } from "react-router";
 
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <IsSideBarOpen.Provider value={{ isSidebarOpen, setIsSidebarOpen }}>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -17,9 +13,8 @@ function App() {
         className="h-screen w-screen dark:bg-gray-900"
       >
         <SideBar />
-        <Home />
+        <Outlet />
       </motion.div>
-    </IsSideBarOpen.Provider>
   );
 }
 
