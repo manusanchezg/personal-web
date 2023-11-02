@@ -2,9 +2,9 @@ export const data = [
   {
     id: 1,
     images: [
-      "https://i.postimg.cc/0NHYkxjF/chess-game-2.png",
-      "ttps://i.postimg.cc/MK8yK9Z6/chess-game-3.png",
       "https://i.postimg.cc/RFLv1Ctb/chess-game-1.png",
+      "https://i.postimg.cc/0NHYkxjF/chess-game-2.png",
+      "https://i.postimg.cc/MK8yK9Z6/chess-game-3.png",
     ],
     link: "github.com/manusanchezg/chess-game-client",
     information:
