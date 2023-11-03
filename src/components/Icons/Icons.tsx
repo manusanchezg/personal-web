@@ -15,12 +15,12 @@ interface Props {
 }
 
 // eslint-disable-next-line
-function Icons({ icon, size = 5, color, onClick }: Props) {
+function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
   switch (icon) {
     case "about":
       return (
         <svg
-          className={`w-${size} h-${size} text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
+          className={`w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -34,7 +34,7 @@ function Icons({ icon, size = 5, color, onClick }: Props) {
     case "portfolio":
       return (
         <svg
-          className={`flex-shrink-0 w-${size} h-${size} text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
+          className={`flex-shrink-0 w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -46,7 +46,7 @@ function Icons({ icon, size = 5, color, onClick }: Props) {
     case "contact":
       return (
         <svg
-          className={`flex-shrink-0 w-${size} h-${size} text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
+          className={`flex-shrink-0 w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -58,7 +58,7 @@ function Icons({ icon, size = 5, color, onClick }: Props) {
     case "donate":
       return (
         <svg
-          className={`flex-shrink-0 w-${size} h-${size} text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
+          className={`flex-shrink-0 w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -70,7 +70,7 @@ function Icons({ icon, size = 5, color, onClick }: Props) {
     case "products":
       return (
         <svg
-          className={`flex-shrink-0 w-${size} h-${size} text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
+          className={`flex-shrink-0 w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -101,7 +101,7 @@ function Icons({ icon, size = 5, color, onClick }: Props) {
           aria-hidden="true"
           fill="currentColor"
           viewBox="0 0 20 20"
-          className={`w-${size} h-${size} text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
+          className={`w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
