@@ -3,7 +3,7 @@ export const mokedInfo = [
     id: "1",
     subtitle: "You can find a lot of information about me",
     title: "About",
-    body: `A brief summary about you and your background. To read more, click below.`,
+    body: `A brief summary about me and my background. To read more, click below.`,
     to: "/about",
   },
   {
@@ -17,7 +17,7 @@ export const mokedInfo = [
     id: "3",
     subtitle: "Here you have ways to contact me",
     title: "Contact",
-    body: `Provide contact information or a brief statement. Click below for more contact details.`,
+    body: `Provide contact information and a brief statement. Click below for more contact details.`,
     to: "/contact",
   },
   {

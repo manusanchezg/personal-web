@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Icons from "../Icons/Icons";
 import { Link } from "react-router-dom";
 import { Item } from "./Card";
+import TypewriterEffect from "./CardBody";
 
 function CardModal({
   selectedId,
@@ -29,19 +30,23 @@ function CardModal({
             <motion.h5 className="text-xl font-semibold dark:text-slate-300">
               {item.subtitle}
             </motion.h5>
-            <motion.p>{item.body}</motion.p>
+            <TypewriterEffect text={item.body} />
             <motion.button
               className="absolute top-2 right-2 text-gray-500 dark:bg-gray-800"
               onClick={() => setSelectedId(null)}
             >
               <Icons icon="cross" size={10} />
             </motion.button>
-            <Link
-              className="flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group text-xl w-32"
-              to={to}
+            <motion.button 
+            className="flex items-center dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 justify-center p-2 rounded-lg group text-xl w-32"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 4, duration: 0.5 }}
             >
-              See more
-            </Link>
+              <Link to={to} className="text-gray-900 dark:text-white">
+                See more
+              </Link>
+            </motion.button>
           </motion.div>
         </motion.div>
       )}

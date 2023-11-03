@@ -107,8 +107,8 @@ function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
           <path
             fill="#5f6368"
             stroke="#5f6368"
-            stroke-linecap="round"
-            stroke-width="1.5"
+            strokeLinecap="round"
+            strokeWidth="1.5"
             d="m0 0 9,9 M0 9 9,0"
           />
         </svg>
