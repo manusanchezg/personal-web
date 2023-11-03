@@ -45,7 +45,10 @@ function SideBar() {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <Link to="/">
+          <Link 
+          to="/"
+          className="flex items-center p-2 dark:text-white"
+          >
             <Title />
           </Link>
           <ul className="space-y-2 font-medium">

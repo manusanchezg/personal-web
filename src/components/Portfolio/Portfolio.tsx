@@ -24,6 +24,10 @@ export default function Portfolio() {
           information={project.information}
         />
       ))}
+      <motion.div
+        className="fixed left-0 right-0 bottom-5 h-2 bg-slate-500"
+        style={{ scaleX }}
+      />
     </>
   );
 }

@@ -6,7 +6,7 @@ function Title() {
         className="h-6 mr-3 sm:h-7"
         alt="Flowbite Logo"
       />
-      <span className="self-center font-semibold whitespace-nowrap dark:text-white">
+      <span className="self-center text-gray-900 font-semibold whitespace-nowrap dark:text-white">
         Manuel Sanchez German
       </span>
     </a>

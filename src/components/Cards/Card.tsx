@@ -14,10 +14,12 @@ function Card({
   item,
   selectedId,
   setSelectedId,
+  to,
 }: {
   item: Item;
   selectedId: string | null;
   setSelectedId: (id: string | null) => void;
+  to: string;
 }) {
   const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
   const handleOnclick = () => {
@@ -67,8 +69,8 @@ function Card({
                 <Icons icon="cross" size={10} />
               </motion.button>
               <Link
-                className="text-gray-500 dark:bg-gray-800"
-                to={"/about"}
+                className="flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group text-xl w-32"
+                to={to}
               >
                 See more
               </Link>
