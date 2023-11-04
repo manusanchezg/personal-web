@@ -5,10 +5,12 @@ const TypewriterEffect = ({
   text,
   style = "",
   isOpen,
+  handleTypingComplete,
 }: {
   text: string;
   style?: string;
   isOpen: boolean;
+  handleTypingComplete: () => void;
 }) => {
   const [displayedText, setDisplayedText] = useState("");
 
@@ -23,6 +25,7 @@ const TypewriterEffect = ({
             return prevText + textArray[charIndex];
           } else {
             clearInterval(intervalId);
+            handleTypingComplete();
             return prevText;
           }
         });
