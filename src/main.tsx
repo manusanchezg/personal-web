@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import About from "./components/About/About.tsx";
 import Portfolio from "./components/Portfolio/Portfolio.tsx";
-import { IsSideBarOpen } from "./utils/contexts";
 import Home from "./components/Home/Home.tsx";
 
 const router = createBrowserRouter([
@@ -28,18 +27,12 @@ const router = createBrowserRouter([
         path: "contact",
       },
       {
-        path: "donate"
-      }
+        path: "donate",
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <IsSideBarOpen.Provider
-    value={{ isSidebarOpen: false, setIsSidebarOpen: () => {} }}
-  >
-    {" "}
-    {/* initial value to avoid mistakes */}
-    <RouterProvider router={router} />
-  </IsSideBarOpen.Provider>
+  <RouterProvider router={router} />
 );
