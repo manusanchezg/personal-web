@@ -3,8 +3,10 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import ButtonDarkMode from "../Home/ButtonDarkMode";
 import Project from "./Project";
 import { data } from "./data";
+import { useIsSideBarOpen } from "../../hooks";
 
 export default function Portfolio() {
+  const { isSidebarOpen } = useIsSideBarOpen();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -13,7 +15,7 @@ export default function Portfolio() {
   });
 
   return (
-    <>
+    <main className={isSidebarOpen ? "blur-sm" : ""}>
       <ButtonDarkMode />
       {data.map((project) => (
         <Project
@@ -28,6 +30,6 @@ export default function Portfolio() {
         className="fixed left-0 right-0 bottom-5 h-2 bg-slate-500"
         style={{ scaleX }}
       />
-    </>
+    </main>
   );
 }
