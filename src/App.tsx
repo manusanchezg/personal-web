@@ -1,7 +1,7 @@
 import SideBar from "./components/SideBar/SideBar";
 import { motion } from "framer-motion";
 import { Outlet } from "react-router";
-import { useState } from "react";
+import React, { useState } from "react";
 import { IsSideBarOpen, IsTypingComplete } from "./utils/contexts";
 
 function App() {
@@ -16,10 +16,12 @@ function App() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="h-screen w-screen dark:bg-gray-900"
+          className="h-screen w-screen dark:bg-gray-900 bg-white"
         >
           <SideBar />
-          <Outlet />
+          <React.Fragment>
+            <Outlet />
+          </React.Fragment>
         </motion.div>
       </IsTypingComplete.Provider>
     </IsSideBarOpen.Provider>

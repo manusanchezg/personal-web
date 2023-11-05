@@ -9,7 +9,7 @@ function Home() {
     <>
       <ButtonDarkMode />
       <div
-        className={`ml-5 h-full dark:text-white dark:bg-gray-900 md:fixed left-72 ${
+        className={`pl-5 dark:text-white dark:bg-gray-900 md:fixed max-md:w-screen left-72 ${
           isSidebarOpen ? "blur-sm" : ""
         }`}
       >

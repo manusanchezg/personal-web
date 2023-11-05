@@ -25,7 +25,7 @@ export default function Project({ id, images, information, link }: Props) {
   };
 
   return (
-    <section className="dark:bg-slate-900 w-screen relative flex justify-center items-center h-screen snap-center">
+    <section className="dark:bg-slate-900 mb-24 w-screen bg-white relative flex justify-center items-center h-[85vh] snap-center">
       <div
         ref={ref}
         className="w-[47rem] h-[33rem] relative max-h-[90vh] m-6 overflow-hidden"
