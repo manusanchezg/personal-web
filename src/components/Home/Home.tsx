@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import ButtonDarkMode from "./ButtonDarkMode";
 import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
 import Cards from "../Cards/Cards";
 
@@ -7,7 +6,6 @@ function Home() {
   const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
   return (
     <>
-      <ButtonDarkMode />
       <div
         className={`pl-5 dark:text-white dark:bg-gray-900 md:fixed max-md:w-screen left-72 ${
           isSidebarOpen ? "blur-sm" : ""

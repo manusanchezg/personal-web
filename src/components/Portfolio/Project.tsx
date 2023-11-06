@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import Scroll from "./Scroll";
 import ProjectModalInfo from "./ProjectModalInfo";
@@ -10,15 +10,18 @@ interface Props {
   information: string;
 }
 
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
 export default function Project({ id, images, information, link }: Props) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 200);
+  const isMiddleElement = id > 1 && id < 4;
+
   const [buttonClicked, setButtonClicked] = useState(false);
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMiddleElement ? [-200, 200] : [0, 0]
+  );
 
   const handleClick = () => {
     setButtonClicked(!buttonClicked);
@@ -31,12 +34,16 @@ export default function Project({ id, images, information, link }: Props) {
         className="w-[47rem] h-[33rem] relative max-h-[90vh] m-6 overflow-hidden"
       >
         <Scroll images={images} information={information} link={link} />
-        <ProjectModalInfo buttonClicked={buttonClicked} handleClick={handleClick} information={information} />
+        <ProjectModalInfo
+          buttonClicked={buttonClicked}
+          handleClick={handleClick}
+          information={information}
+        />
       </div>
       <div className="flex flex-col items-center justify-center gap-6">
         <motion.h2
           className="text-slate-600 dark:text-slate-300 font-semibold text-5xl"
-          style={{ y }}
+          style={{y}}
         >{`#00${id}`}</motion.h2>
         <motion.button
           onClick={handleClick}

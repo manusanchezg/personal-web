@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Outlet } from "react-router";
 import React, { useState } from "react";
 import { IsSideBarOpen, IsTypingComplete } from "./utils/contexts";
+import ButtonDarkMode from "./components/Home/ButtonDarkMode";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,6 +19,7 @@ function App() {
           transition={{ duration: 0.5 }}
           className="h-screen w-screen dark:bg-gray-900 bg-white"
         >
+          <ButtonDarkMode />
           <SideBar />
           <React.Fragment>
             <Outlet />

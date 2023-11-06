@@ -1,6 +1,5 @@
 import "./styles.css";
 import { motion, useScroll, useSpring } from "framer-motion";
-import ButtonDarkMode from "../Home/ButtonDarkMode";
 import Project from "./Project";
 import { data } from "./data";
 import { useIsSideBarOpen } from "../../hooks";
@@ -16,7 +15,6 @@ export default function Portfolio() {
 
   return (
     <main className={isSidebarOpen ? "blur-sm" : ""}>
-      <ButtonDarkMode />
       {data.map((project) => (
         <Project
           id={project.id}
