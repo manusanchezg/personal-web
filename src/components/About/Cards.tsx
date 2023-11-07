@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CardAbout from "./CardAbout";
@@ -31,30 +31,32 @@ const Cards = () => {
     },
   ];
 
+  const controlsArray = cards.map(() => useAnimation());
+  const refArray = cards.map(() => useRef<HTMLDivElement>(null));
+  const [inViewRef, inView] = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controlsArray.forEach((controls) => controls.start("visible"));
+    }
+  }, [controlsArray, inView]);
+
   return (
-    <div className="flex flex-col justify-center align-center">
-      {cards.map((card, index) => {
-        const controls = useAnimation();
-        const [ref, inView] = useInView();
-
-        useEffect(() => {
-          if (inView) {
-            controls.start("visible");
-          }
-        }, [controls, inView]);
-
-        return (
-          <CardAbout
-            key={index}
-            jobTitle={card.jobTitle}
-            company={card.company}
-            duration={card.duration}
-            description={card.description}
-            controls={controls}
-            ref={ref}
-          />
-        );
-      })}
+    <div
+      className="p-6 flex flex-col justify-center items-center dark:bg-slate-900"
+      ref={inViewRef}
+    >
+      {cards.map((card, index) => (
+        <CardAbout
+          key={index}
+          jobTitle={card.jobTitle}
+          company={card.company}
+          duration={card.duration}
+          description={card.description}
+          controls={controlsArray[index]}
+          ref={(el) => el && (inView ? controlsArray[index].start("visible") : null)}
+        />
+      ))}
     </div>
   );
 };
