@@ -2,37 +2,10 @@ import { useEffect, useRef } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CardAbout from "./CardAbout";
+import { jobs } from "./data";
 
 const Cards = () => {
-  const cards = [
-    {
-      jobTitle: "tu vieja en tanga",
-      company: "la de eia",
-      duration: "5 anos",
-      description: "no hice nada",
-    },
-    {
-      jobTitle: "tu vieja en tanga",
-      company: "la de eia",
-      duration: "5 anos",
-      description: "no hice nada",
-    },
-    {
-      jobTitle: "tu vieja en tanga",
-      company: "la de eia",
-      duration: "5 anos",
-      description: "no hice nada",
-    },
-    {
-      jobTitle: "tu vieja en tanga",
-      company: "la de eia",
-      duration: "5 anos",
-      description: "no hice nada",
-    },
-  ];
-
-  const controlsArray = cards.map(() => useAnimation());
-  const refArray = cards.map(() => useRef<HTMLDivElement>(null));
+  const controlsArray = jobs.map(() => useAnimation());
   const [inViewRef, inView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
@@ -46,15 +19,17 @@ const Cards = () => {
       className="p-6 flex flex-col justify-center items-center dark:bg-slate-900"
       ref={inViewRef}
     >
-      {cards.map((card, index) => (
+      {jobs.map((job, index) => (
         <CardAbout
           key={index}
-          jobTitle={card.jobTitle}
-          company={card.company}
-          duration={card.duration}
-          description={card.description}
+          jobTitle={job.jobTitle}
+          company={job.company}
+          duration={job.duration}
+          description={job.description}
           controls={controlsArray[index]}
-          ref={(el) => el && (inView ? controlsArray[index].start("visible") : null)}
+          ref={(el) =>
+            el && (inView ? controlsArray[index].start("visible") : null)
+          }
         />
       ))}
     </div>

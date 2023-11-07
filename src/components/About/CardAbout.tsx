@@ -5,7 +5,7 @@ interface CardAboutProps {
   jobTitle: string;
   company: string;
   duration: string;
-  description: string;
+  description: string[];
   controls: AnimationControls;
 }
 
@@ -21,12 +21,24 @@ const CardAbout = forwardRef<HTMLDivElement, CardAboutProps>(
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 1 }}
-        className="bg-white p-4 mb-4 shadow rounded border border-white w-2/4 max-md:w-3/5 max-sm:w-4/5 h-screen"
+        className="p-4 mb-4 shadow rounded border w-2/4 max-md:w-3/5 max-sm:w-4/5 h-screen"
       >
-        <h3 className="text-lg font-semibold">{jobTitle}</h3>
-        <p className="text-sm mb-2 text-gray-500">{company}</p>
-        <p className="text-sm mb-2 text-gray-500">{duration}</p>
-        <p className="text-sm text-gray-700">{description}</p>
+        <h3 className="text-lg dark:text-slate-200 font-semibold">
+          {jobTitle}
+        </h3>
+        <div className="flex gap-5 ml-4">
+          <p className="text-sm mb-2 dark:text-slate-400 text-gray-500">
+            {company}
+          </p>
+          <p className="text-sm mb-2 dark:text-slate-400 text-gray-500">
+            {duration}
+          </p>
+        </div>
+        <ul className="text-sm text-gray-700 dark:text-slate-400">
+          {description.map((desc) => (
+            <li>{desc}</li>
+          ))}
+        </ul>
       </motion.div>
     );
   }
