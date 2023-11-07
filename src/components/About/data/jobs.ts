@@ -1,6 +1,6 @@
 export const jobs = [
   {
-    jobTitle: "Customer service",
+    title: "Customer service",
     company: "La Finca",
     duration: "2015-2022",
     description: [
@@ -10,7 +10,7 @@ export const jobs = [
     ],
   },
   {
-    jobTitle: "Fullstack TA",
+    title: "Fullstack TA",
     company: "soyHenry",
     duration: "01/2022-07/2022",
     description: [
@@ -21,7 +21,7 @@ export const jobs = [
     ],
   },
   {
-    jobTitle: "Web Development Teaching assistant",
+    title: "Web Development Teaching assistant",
     company: "CoderHouse",
     duration: "07/2022-Now",
     description: [

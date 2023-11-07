@@ -4,7 +4,14 @@ import { useInView } from "react-intersection-observer";
 import CardAbout from "./CardAbout";
 import { jobs } from "./data";
 
-const Cards = () => {
+interface Jobs {
+  title: string,
+  company: string,
+  duration: string,
+  description: string[],
+}
+
+const Cards = ({data}: {data: Jobs[]}) => {
   const controlsArray = jobs.map(() => useAnimation());
   const [inViewRef, inView] = useInView({ triggerOnce: true });
 
@@ -19,10 +26,10 @@ const Cards = () => {
       className="p-6 flex flex-col justify-center items-center dark:bg-slate-900"
       ref={inViewRef}
     >
-      {jobs.map((job, index) => (
+      {data.map((job, index) => (
         <CardAbout
           key={index}
-          jobTitle={job.jobTitle}
+          title={job.title}
           company={job.company}
           duration={job.duration}
           description={job.description}

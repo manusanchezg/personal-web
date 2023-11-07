@@ -2,7 +2,7 @@ import { AnimationControls, motion } from "framer-motion";
 import { forwardRef } from "react";
 
 interface CardAboutProps {
-  jobTitle: string;
+  title: string;
   company: string;
   duration: string;
   description: string[];
@@ -10,7 +10,7 @@ interface CardAboutProps {
 }
 
 const CardAbout = forwardRef<HTMLDivElement, CardAboutProps>(
-  ({ jobTitle, company, duration, description, controls }, ref) => {
+  ({ title, company, duration, description, controls }, ref) => {
     return (
       <motion.div
         ref={ref}
@@ -21,10 +21,10 @@ const CardAbout = forwardRef<HTMLDivElement, CardAboutProps>(
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 1 }}
-        className="p-4 mb-4 shadow rounded border w-2/4 max-md:w-3/5 max-sm:w-4/5 h-screen"
+        className="p-4 mb-4 shadow rounded border w-2/4 max-md:w-3/5 max-sm:w-4/5"
       >
         <h3 className="text-lg dark:text-slate-200 font-semibold">
-          {jobTitle}
+          {title}
         </h3>
         <div className="flex gap-5 ml-4">
           <p className="text-sm mb-2 dark:text-slate-400 text-gray-500">
