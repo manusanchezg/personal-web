@@ -1,33 +1,52 @@
 export const studies = [
-    {
-      title: "Customer service",
-      company: "La Finca",
-      duration: "2015-2022",
-      description: [
-        "Managed a team to work on schedule",
-        "Assistance in stock management and cash flow",
-        "Handling bulk clients",
-      ],
-    },
-    {
-      title: "Fullstack TA",
-      company: "soyHenry",
-      duration: "01/2022-07/2022",
-      description: [
-        "Coordinate a group of students to accomplish the integration of a study group",
-        "Lead students on the first steps of the bootcamp",
-        "Assist and correct resolution of exercises and promote group collaboration",
-        "propose ideas for the improvement of the bootcamp",
-      ],
-    },
-    {
-      title: "Web Development Teaching assistant",
-      company: "CoderHouse",
-      duration: "07/2022-Now",
-      description: [
-        "Assist students during and outside class clearing doubts and explaining concepts",
-        "Evaluated and offered constructive feedback on projects and assignments, contributing to student growth and improvement",
-        "Guided an average of 25 students per course, achieving a completion rate of 70%"
-      ],
-    },
-  ];
+  {
+    title: "Bachelor's Degree Mathematics",
+    company: "FaMAF, UNC",
+    duration: "2017-2020",
+    description: [
+      `The first three years of the Bachelor's Degree in Mathematics 
+      at FaMAF, UNC, focus on foundational concepts such as calculus, 
+      algebra, geometry, and mathematical analysis. Students develop 
+      strong problem-solving skills, critical thinking, and mathematical 
+      reasoning. The curriculum also introduces related disciplines like 
+      physics and computer science, offering a well-rounded education in 
+      mathematics and its applications.`,
+    ],
+  },
+  {
+    title: "Fullstack Development bootcamp",
+    company: "soyHenry",
+    duration: "01/2022-07/2022",
+    description: [
+      `The SoyHenry Web Full Stack Development Bootcamp provides a 
+      comprehensive, hands-on learning experience for aspiring full-stack 
+      developers. Covering key technologies like HTML, CSS, JavaScript, React,
+       and Node.js, participants engage in real-world projects, receive mentorship, 
+       and collaborate with peers. This immersive program prepares individuals for 
+       successful careers in web development.`,
+    ],
+  },
+  {
+    title: "Fullstack Development bootcamp",
+    company: "Experis Academy",
+    duration: "07/2022-01/2023",
+    description: [
+      `Brightcode is a unique Full Stack boot camp, designed by Israel's 
+        leading software lecturers. In the purpose of training participants to 
+        become skillful software developers. The program is built on the basis of industry needs
+        and combines theory and practice delivered by senior mentors with extensive experience 
+        in the industry. The workshop is based on theory and aplied work according to industrial 
+        standards that emphasize:`,
+      `• Maintainability, modularity, optimization & sound workflows.`,
+      `• Programming Python.`,
+      `• Data Structures.`,
+      `• Interface design and in-depth work in HTML and CSS.`,
+      `• Advanced JavaScript & ES6 programming.`,
+      `• Design Patterns for JS environment.`,
+      `• Git flow, Visual Studio Code.`,
+      `• Server-Side development in NodeJS and ExpressJS environment with HTTP protocol`,
+      `• Working with MySQL database`,
+      `• React Libraries`,
+    ],
+  },
+];

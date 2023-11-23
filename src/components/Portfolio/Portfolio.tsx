@@ -14,7 +14,11 @@ export default function Portfolio() {
   });
 
   return (
-    <main className={isSidebarOpen ? "blur-sm" : ""}>
+    <main
+      className={`${
+        isSidebarOpen ? "blur-sm" : ""
+      } dark:bg-slate-900  max-md:pl-0 max-md:w-screen pl-32 pt-10`}
+    >
       {data.map((project) => (
         <Project
           id={project.id}
