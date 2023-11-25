@@ -3,7 +3,7 @@ import { useIsSideBarOpen } from "../../hooks/useIsSideBarOpen";
 import Cards from "../Cards/Cards";
 
 function Home() {
-  const { isSidebarOpen, setIsSidebarOpen } = useIsSideBarOpen();
+  const { isSidebarOpen } = useIsSideBarOpen();
   return (
     <>
       <div
