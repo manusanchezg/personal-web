@@ -6,6 +6,9 @@ import About from "./components/About/About.tsx";
 import Portfolio from "./components/Portfolio/Portfolio.tsx";
 import Home from "./components/Home/Home.tsx";
 import { Contact } from "./components/Contact/Contact.tsx";
+import { Donate } from "./components/Donate/Donate.tsx";
+import ComingSoonPage from "./components/Helpers/ComingSoon.tsx";
+import NotFoundPage from "./components/Helpers/Error.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +33,16 @@ const router = createBrowserRouter([
       },
       {
         path: "donate",
+        element: <Donate />
       },
+      {
+        path: "products",
+        element: <ComingSoonPage />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />
+      }
     ],
   },
 ]);
