@@ -23,22 +23,24 @@ function ProjectModalInfo({
         buttonClicked ? "" : "hidden"
       } absolute h-full w-full top-0 left-0`}
     >
-      <div className="absolute h-full w-full top-0 left-0 backdrop-blur-sm flex items-center justify-center">
-        <TypewriterEffect
-          text={information}
-          handleTypingComplete={handleTypingComplete}
-          isOpen={buttonClicked}
-          style="text-xl font-semibold dark:bg-slate-900 dark:text-slate-200 bg-white"
-        />
+        <div className="absolute h-full w-full top-0 left-0 backdrop-blur-sm flex flex-col items-center justify-center">
+      <div className="relative m-20 p-10 dark:bg-slate-900 dark:text-slate-200 bg-white rounded-2xl">
+          <TypewriterEffect
+            text={information}
+            handleTypingComplete={handleTypingComplete}
+            isOpen={buttonClicked}
+            style="text-xl font-semibold"
+          />
         <motion.button
-          className="absolute top-3 right-3"
-          onClick={() => {
-            handleClick();
-            handleTypingComplete();
-          }}
-        >
-          <Icons icon="cross" size={10} />
-        </motion.button>
+            className="absolute top-1 right-1"
+            onClick={() => {
+              handleClick();
+              handleTypingComplete();
+            }}
+          >
+            <Icons icon="cross" size={5} />
+          </motion.button>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,10 @@ export const data = [
     ],
     link: "github.com/manusanchezg/chess-game-client",
     information:
-      "This app was made with react for frontend and python for backend",
+      `Thhis app was made with react for frontend and python for backend,
+      a simple chess game app where you can choose wether to play with the computer
+      or with another player. You can also choose the amount of time you want to play.
+      Click on the image to redirect you to the github repository or deplyed page if there is`,
   },
   {
     id: 2,
@@ -19,7 +22,9 @@ export const data = [
     ],
     link: "github.com/manusanchezg/Reversi-Game",
     information:
-      "This app is a game to play in the console made entirely with python",
+      `Thhis app is a game to play in the console made entirely with python,
+      the game is called Othello, and is available in github to se the repository.
+      Click on the image to redirect you to the github repository or deplyed page if there is`,
   },
   {
     id: 3,
@@ -29,7 +34,10 @@ export const data = [
     ],
     link: "https://snake-game-canvas.vercel.app/",
     information:
-      "This app was made with pure javascript and canvas, fun to play the classic snake game",
+      `Thhis app was made with pure javascript, HTML and CSS, fun to play the classic snake game.
+      The project is available to play in vercel, where I deployed, you can just click on the
+      image or follow the link.
+      Click on the image to redirect you to the github repository or deplyed page if there is.`,
   },
   {
     id: 4,
@@ -40,6 +48,9 @@ export const data = [
     ],
     link: "https://my-weather-app-eight-gamma.vercel.app/",
     information:
-      "This app was made with React and module css for style, a simple weather app",
+      `Thhis app was made with React and module css for style, a weather app, where you can search
+      different cities around the world, check the weather over there, click on the card and
+      see even more details of the weather on the city/country that you looked for.
+      Click on the image to redirect you to the github repository or deplyed page if there is.`,
   },
 ];

@@ -98,18 +98,24 @@ function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
     case "cross":
       return (
         <svg
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          className={`w-${size} h-${size} ${color} transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white`}
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          className={`w-${size} h-${size}`}
         >
           <path
-            fill="#5f6368"
-            stroke="#5f6368"
-            strokeLinecap="round"
-            strokeWidth="1.5"
-            d="m0 0 9,9 M0 9 9,0"
+            d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
+            fill="none"
+            stroke="currentColor"
+            stroke-miterlimit="10"
+            stroke-width="32"
+          />
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="32"
+            d="M320 320L192 192M192 320l128-128"
           />
         </svg>
       );
