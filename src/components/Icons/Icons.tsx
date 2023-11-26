@@ -158,7 +158,7 @@ function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
       return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`w-${size} h-${size}`}
+          className={`w-${size} h-${size} dark:text-slate-500`}
           viewBox="0 0 512 512"
         >
           <path
@@ -167,7 +167,7 @@ function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="32"
+            stroke-width="35"
           />
           <path
             d="M256 448h0c-70.4 0-128-57.6-128-128v-96.07c0-65.07 57.6-96 128-96h0c70.4 0 128 25.6 128 96V320c0 70.4-57.6 128-128 128z"
@@ -175,7 +175,7 @@ function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="32"
+            stroke-width="35"
           />
           <path
             d="M179.43 143.52a49.08 49.08 0 01-3.43-15.73A80 80 0 01255.79 48h.42A80 80 0 01336 127.79a41.91 41.91 0 01-3.12 14.3"
@@ -183,7 +183,7 @@ function Icons({ icon, size = 5, color = "text-gray-500", onClick }: Props) {
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="32"
+            stroke-width="35"
           />
         </svg>
       );
